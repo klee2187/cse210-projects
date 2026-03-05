@@ -1,19 +1,34 @@
 using System;
+using System.Net;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep3 World!");
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 101);
 
-        Console.Write("What is the magic number?");
-        Console.ReadLine();
-        
-        int magicNumber = 
-        
-        Console.Write("What is your guess? ");
+        int guess = -1;
 
-        console.WriteLine
+        while (guess != magicNumber)
+        {
+            Console.Write("What is your guess?");
+
+            if (guess < magicNumber)
+            {
+                Console.WriteLine("Higher");
+            }
+            else if (guess > magicNumber)
+            {
+                Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("You got it!");
+            }
+                
+
+        }
 
     }
 }
