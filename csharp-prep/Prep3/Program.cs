@@ -9,10 +9,14 @@ class Program
         int magicNumber = randomGenerator.Next(1, 101);
 
         int guess = -1;
+        int tries = 0;
 
         while (guess != magicNumber)
         {
             Console.Write("What is your guess?");
+            guess = int.Parse(Console.ReadLine());
+
+            tries++;
 
             if (guess < magicNumber)
             {
@@ -26,9 +30,7 @@ class Program
             {
                 Console.WriteLine("You got it!");
             }
-                
-
         }
-
+        Console.WriteLine($"It took you {tries} guesses");
     }
 }
