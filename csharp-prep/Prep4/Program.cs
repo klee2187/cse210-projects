@@ -48,8 +48,23 @@ class Program
                 max = number;
             }
         }
-        
+
         Console.WriteLine($"The max is: {max}");
 
+        double? minPositive = null;
+
+        foreach (double number in numbers)
+        {
+            if (number > 0 && (minPositive == null || number < minPositive))
+            {
+                minPositive = number;
+            } 
+        }
+
+        Console.WriteLine($"The smallest positive number is: {minPositive}");
+
+        numbers.Sort();
+        Console.WriteLine("Sorted List: " + string.Join(", ", numbers));
+        
     }
 }
