@@ -1,6 +1,9 @@
-public class GetPrompt
+using System;
+
+
+class Prompt
 {
-    public List<string> _prompts = new List<string>
+    static List<string> _prompts = new List<string>
     {
         
         "Who was the most interesting person I interacted with today?",
@@ -21,10 +24,12 @@ public class GetPrompt
         
     };
 
-    public string RandomPromptGenerator()
-        {
+    public string GeneratePrompt()
+    {
         Random prompt = new Random();
-        int index = prompt.Next(_prompts.Count);
-        return _prompts[index];
-        }
+        int i = prompt.Next(_prompts.Count);
+        return _prompts[i];
+    }   
+
+   
 }
