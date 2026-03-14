@@ -2,11 +2,14 @@
 class Scripture
 {
    private string _reference;
+   private string _scriptureIntact;
+   private Random _random = new Random();
    private List<Word> _scripture = new List<Word>();
 
    public Scripture(string reference, string scripture)
     {
         _reference = reference;
+        _scriptureIntact = scripture; 
 
         string[] words = scripture.Split(" ");
 
@@ -36,7 +39,6 @@ class Scripture
     public void HideRandomWords()
     {
         int totalWords = _scripture.Count;
-        Random random = new Random();
         int wordCount = 0;
 
         foreach (Word word in _scripture)
@@ -56,12 +58,12 @@ class Scripture
             {
                 do
                 {
-                    index = random.Next(totalWords);
+                    index = _random.Next(totalWords);
                     word = _scripture[index];
                 } while (word.GetHiddenWord());
-                {
-                    word.SetHiddenWord();
-                }
+                
+                word.SetHiddenWord();
+                
             }
         }
         else
@@ -91,5 +93,10 @@ class Scripture
         string scripture = $"{_reference} {wholeScripture}"; 
         Console.WriteLine(scripture);
         
+    }
+
+    public void DisplayIntactScripture()
+    {
+        Console.WriteLine($"{_reference} {_scriptureIntact}");
     }
 }

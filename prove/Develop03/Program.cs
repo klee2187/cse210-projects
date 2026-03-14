@@ -42,6 +42,6 @@ class Program
             }
         }
         while (userInput != "quit");
-        scripture.DisplayScripture();
+        scripture.DisplayIntactScripture();
     }
 }
