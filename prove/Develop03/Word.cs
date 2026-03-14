@@ -9,13 +9,32 @@ class Word
         _hiddenWord = false;
     }
 
-    public void HideWord()
+    public bool GetHiddenWord()
+    {
+       return _hiddenWord;
+    }
+
+    public void SetHiddenWord()
     {
         _hiddenWord = true;
     }
 
-    public string GetHiddenWord()
+    public string HiddenPlaceholder()
     {
-       
+        string placeholder = "";
+
+        if (_hiddenWord)
+        {
+            for (int i = 0; i < _word.Length; i++)
+            {
+                placeholder += "_";
+            }
+
+            return placeholder;
+        }
+        else
+        {
+            return _word;
+        }
     }
 }
