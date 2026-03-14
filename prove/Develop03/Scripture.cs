@@ -87,10 +87,8 @@ class Scripture
         }
 
         string wholeScripture = string.Join(" ", words);
-
-        wholeScripture = char.ToUpper(wholeScripture[0]) + wholeScripture.Substring(1);
-        string scripture = $"{_reference} {wholeScripture}";
-
+        
+        string scripture = $"{_reference} {wholeScripture}"; 
         Console.WriteLine(scripture);
         
     }

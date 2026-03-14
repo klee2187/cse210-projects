@@ -30,17 +30,18 @@ class Program
             if (userInput != "quit")
             {
                 scripture.HideRandomWords();
-                scripture.DisplayScripture();
 
                 if (scripture.AllHidden())
-                {
+                
+                { 
                     break;
                 }
+
+                Console.Clear();
+                scripture.DisplayScripture();
             }
         }
         while (userInput != "quit");
-
-        Console.Clear();
         scripture.DisplayScripture();
     }
 }
