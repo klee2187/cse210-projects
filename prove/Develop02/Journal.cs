@@ -42,13 +42,7 @@ class Journal
         {
             string[] lines = entry.Split(" | ");
 
-            Entry newEntry = new Entry()
-            {
-                _dateText = lines[0],
-                _showPrompt = lines[1],
-                _userEntry = lines[2]
-            };
-
+            Entry newEntry = new Entry(lines[0], lines[1], lines[2]);
             journal.Add(newEntry);       
         }
 
