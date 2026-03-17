@@ -20,7 +20,7 @@ public class Entry
        
     }
 
-    public void CreateEntry(string dateText, string showPrompt, string userEntry)
+    public Entry(string dateText, string showPrompt, string userEntry)
     {
         _dateText = dateText;
         _showPrompt = showPrompt;
