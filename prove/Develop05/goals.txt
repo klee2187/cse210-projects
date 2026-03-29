@@ -1,0 +1,4 @@
+You have 1025 points. You are currently a Sprout, you need 975 points to grow to the next stage.
+SimpleGoal:dishes,do dishes,25
+EternalGoal:temple,go to the temple,50
+ChecklistGoal:workout,exercise 30 min,50,500,6,5
