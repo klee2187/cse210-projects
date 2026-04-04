@@ -17,28 +17,6 @@ public class Address
         _country = country;
     }
 
-    public string SetStreet()
-    {
-        return _street;
-    }
-
-    public string GetCity()
-    {
-        return _city;
-    }
-
-    public string GetState()
-    {
-        return _state;
-    }
-
-    public int GetZip()
-    {
-        return _zip;
-    }
-
-    
-
     public bool GetIsInUSA()
     {
         if (_country == "USA")
@@ -52,9 +30,10 @@ public class Address
         }    
     }
 
-    public void DisplayAddress()
+    public string DisplayAddress()
     {
-        Console.WriteLine($"{_street}\n{_city}, {_state} {_zip}\n{_country}");  
+        string address = $"\n{_street}\n{_city}, {_state} {_zip}\n{_country}"; 
+        return address; 
 
     }
 

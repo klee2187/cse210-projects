@@ -6,10 +6,10 @@ public class Order
     private Customer _customer;
     private int _shipping;
 
-    public Order(int shipping)
+    public Order(Customer customer)
     {
-        _shipping = shipping;
-    }
+        _customer = customer;
+        _products = new List<Product>();    }
 
     public int GetShippingCost()
     {
@@ -36,21 +36,29 @@ public class Order
 
         total += GetShippingCost();
 
+        Console.WriteLine($"Total cost: ${total}");
+
         return total;
+    }
+
+    public void AddProduct(Product product)
+    {
+        _products.Add(product);
     }
 
     public void DisplayShippingLabel()
     {
-        Console.WriteLine($"{_customer.GetName()}\n{_customer.GetAddress()}");
+        Console.WriteLine($"\n{_customer.GetName()}");
+        Console.WriteLine($"{_customer.GetAddress().DisplayAddress()}\n");
     }
 
     public void DisplayPackingLabel()
     {
-        Console.WriteLine($"{_customer.GetName}");
+        Console.WriteLine($"{_customer.GetName()}");
 
         foreach (Product product in _products)
         {
-            Console.WriteLine($"{product.GetName()} - {product.GetProductId()}");
+            Console.WriteLine($"{product.GetQuantity()} {product.GetName()} - {product.GetProductId()}");
         }
     }
 }

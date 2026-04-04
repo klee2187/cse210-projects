@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 public class Customer
 {
     private string _name;
@@ -6,6 +8,7 @@ public class Customer
     public Customer(string name, Address address)
     {
         _name = name;
+        _address = address;
     }
 
     public string GetName()
@@ -18,12 +21,12 @@ public class Customer
         return _address;
     }
 
+
     public bool LiveInUSA()
     {
        bool address =  _address.GetIsInUSA();
        return address;
     }
-
 
 }
 
