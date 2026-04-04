@@ -15,8 +15,8 @@ public class Video
     public void DisplayVideoInfo()
     {
 
-        Console.WriteLine($"Title: {_title}, Author: {_author}, Video Duration: {_length} seconds, Number of comments: {NumComments()} ");
-        Console.WriteLine($"Comments: {_comments}");
+        Console.WriteLine($"\n\nTitle: {_title}, \nAuthor: {_author}, \nVideo Duration: {_length} seconds, \nNumber of comments: {NumComments()} ");
+        Console.WriteLine($"\nComments:");
 
         foreach (Comment comment in _comments)
         {

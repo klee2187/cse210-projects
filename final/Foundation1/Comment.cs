@@ -7,6 +7,6 @@ public class Comment
 
     public void DisplayComments()
     {
-        Console.WriteLine($"Name: {_commenter}, Comment: {_text}");
+        Console.WriteLine($"Name: {_commenter}, \nComment: {_text}");
     }
 }
