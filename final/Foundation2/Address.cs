@@ -37,14 +37,19 @@ public class Address
         return _zip;
     }
 
-    public string GetCountry()
-    {
-        return _country;
-    }
+    
 
     public bool GetIsInUSA()
     {
-        return true;
+        if (_country == "USA")
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }    
     }
 
     public void DisplayAddress()

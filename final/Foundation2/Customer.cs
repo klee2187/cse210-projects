@@ -6,7 +6,6 @@ public class Customer
     public Customer(string name, Address address)
     {
         _name = name;
-        _address = address;
     }
 
     public string GetName()

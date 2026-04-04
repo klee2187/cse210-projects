@@ -4,15 +4,14 @@ public class Order
 {
     private List<Product> _products;
     private Customer _customer;
-    private float _shipping;
+    private int _shipping;
 
-    public Order(Customer customer, float shipping)
+    public Order(int shipping)
     {
-        _customer = customer;
         _shipping = shipping;
     }
 
-    public float GetShippingCost()
+    public int GetShippingCost()
     {
         if (_customer.LiveInUSA() == true)
         {
@@ -26,9 +25,9 @@ public class Order
         return _shipping;
     }
 
-    public float GetTotalCost()
+    public decimal GetTotalCost()
     {
-        float total = 0;
+        decimal total = 0;
 
         foreach (Product product in _products)
         {
