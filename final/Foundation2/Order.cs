@@ -28,14 +28,16 @@ public class Order
 
     public float GetTotalCost()
     {
-        float total += 0;
+        float total = 0;
+
         foreach (Product product in _products)
         {
-            
-
+            total += product.TotalProductCost();
         }
 
-        float total = _products * GetShippingCost();
+        total += GetShippingCost();
+
+        return total;
     }
 
     public void DisplayShippingLabel()
