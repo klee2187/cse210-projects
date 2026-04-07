@@ -6,12 +6,12 @@ public class IndoorBiking : Activity
 
     public override decimal CalculateDistance()
     {
-       return GetSpeed() * GetDuration() / 60;
+       return GetSpeed() * (GetDuration() / 60m);
     }
 
     public override decimal CalculateSpeed()
     {
-        return (GetDistance() * 60) / GetDuration();
+        return GetDistance() / GetDuration() / 60m;
     }
 
     public override decimal CalculatePace()
@@ -21,6 +21,6 @@ public class IndoorBiking : Activity
 
     public override void GetSummary()
     {
-        Console.WriteLine($"\n{GetDate()} Stationary Biking ({GetDuration()} min): Distance {CalculateDistance().ToString("F1")} km, Speed {CalculateSpeed().ToString("F1")} kph, Pace {CalculatePace().ToString("F1")} min per km\n");
+        Console.WriteLine($"\n{GetDate()} Stationary Biking ({GetDuration()} min): Distance {CalculateDistance().ToString("F1")} km, Speed {GetSpeed().ToString("F1")} kph, Pace {CalculatePace().ToString("F1")} min per km\n");
     }
 }

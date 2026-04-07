@@ -6,11 +6,11 @@ class Program
     {
         Console.WriteLine("Hello Foundation4 World!");
 
-        Running run = new Running(40, "16 Jun 2023", 5.0m, 4.8m, 5.7m);
+        Running run = new Running(45, "16 Jun 2023", 6.2m, 8.1m, 7.5m);
 
-        IndoorBiking bike = new IndoorBiking(25, "01 Feb 2026", 6.4m, 3.0m, 4.5m);
+        IndoorBiking bike = new IndoorBiking(30, "01 Feb 2026", 10.5m, 20.0m, 3.3m);
 
-        Swimming swim = new Swimming(60, "12 Mar 1999", 3.4m, 5.4m, 4.8m, 25);
+        Swimming swim = new Swimming(30, "12 Mar 1999", 2.4m, 4.4m, 14.8m, 40);
 
         run.GetSummary();
         bike.GetSummary();

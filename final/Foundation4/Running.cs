@@ -7,12 +7,12 @@ public class Running : Activity
 
     public override decimal CalculateDistance()
     {
-       return GetDuration() / GetPace();
+       return GetSpeed() / (GetDuration() / 60m);
     }
 
     public override decimal CalculateSpeed()
     {
-        return GetDistance() / GetDuration();
+        return GetDistance() / (GetDuration() / 60m);
     }
 
     public override decimal CalculatePace()

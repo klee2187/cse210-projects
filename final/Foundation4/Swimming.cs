@@ -12,17 +12,17 @@ public class Swimming : Activity
 
     public override decimal CalculateDistance()
     {
-       return (_laps * 50) / 1000;
+       return (_laps * 50m) / 1000m;
     }
 
     public override decimal CalculateSpeed()
     {
-        return (GetDistance() / 1000) / GetDuration();
+        return (CalculateDistance() * (60m / GetDuration()));
     }
 
     public override decimal CalculatePace()
     {
-        return GetDistance() / (50 * GetDuration());
+        return GetDuration() / CalculateDistance();
     }
 
     public override void GetSummary()
