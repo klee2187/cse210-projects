@@ -13,8 +13,14 @@ public Address(string street, string city, string state, int zip)
         _zip = zip;
     }
 
-    public void DisplayAddress()
+    public string DisplayAddress()
     {
-        Console.WriteLine($"{_street}\n{_city}, {_state} {_zip}");
+        string fullAddress = $"{_street}\n{_city}, {_state} {_zip}";
+        return fullAddress;
+    }
+
+    public override string ToString()
+    {
+        return DisplayAddress();
     }
 }

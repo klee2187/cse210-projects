@@ -1,15 +1,16 @@
 using System.Runtime;
+using System.Security.Authentication;
 
 public abstract class Event
 {
     private string _type;
     private string _title;
     private string _description;
-    private DateOnly _date;
-    private TimeOnly _time;
+    private string _date;
+    private string _time;
     private Address _address;
 
-    public Event(string type, string title, string description, DateOnly date, TimeOnly time, Address address)
+    public Event(string type, string title, string description, string date, string time, Address address)
     {
         _type = type;
         _title = title;
@@ -18,6 +19,11 @@ public abstract class Event
         _time = time;
         _address = address;
 
+    }
+
+    public string GetEventType()
+    {
+        return _type;
     }
 
     public string GetTitle()
@@ -30,12 +36,12 @@ public abstract class Event
         return _description;
     }
 
-    public DateOnly GetDateOnly()
+    public string GetDate()
     {
         return _date;
     }
 
-    public TimeOnly GetTimeOnly()
+    public string GetTime()
     {
         return _time;
     }
@@ -53,7 +59,11 @@ public abstract class Event
         Console.WriteLine($"{_address}");
     }
 
-    public abstract string FullDetails();
-    public abstract string ShortDescription();
+    public abstract void DisplayAllDetails();
+
+    public void DisplayShortDescription()
+    {
+        Console.WriteLine($"{_type}\n{_title}\n{_date}\n\n");
+    }
 
 }
