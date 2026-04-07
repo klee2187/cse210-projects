@@ -55,15 +55,15 @@ public abstract class Event
     {
         Console.WriteLine($"{_title}\n");
         Console.WriteLine($"{_description}\n");
-        Console.WriteLine($"{_date} {_time}\n");
-        Console.WriteLine($"{_address}");
+        Console.WriteLine($"{_date}\n{_time}\n");
+        Console.WriteLine($"{_address}\n");
     }
 
     public abstract void DisplayAllDetails();
 
     public void DisplayShortDescription()
     {
-        Console.WriteLine($"{_type}\n{_title}\n{_date}\n\n");
+        Console.WriteLine($"\n{_type}\n{_title}\n{_date}\n\n");
     }
 
 }

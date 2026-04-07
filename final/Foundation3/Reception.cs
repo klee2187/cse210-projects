@@ -12,16 +12,19 @@ public class Reception : Event
 
     public override void DisplayAllDetails()
     {   
+        Console.WriteLine("\nReception Standard Details:\n");
         DisplayStandardDetails();
         
+        Console.WriteLine("\nReception Full Details:\n");
         Console.WriteLine($"You have been cordially invited to attend the {GetEventType()} of two people who have decided to begin their life together.");
         Console.WriteLine($"Here are the details of this very special occasion:\n");
         Console.WriteLine($"{GetTitle()}\n");
         Console.WriteLine($"{GetDescription()}\n");
-        Console.WriteLine($"{GetDate()} {GetTime()}");
+        Console.WriteLine($"{GetDate()}\n{GetTime()}");
         Console.WriteLine($"{GetAddress()}\n");
         Console.WriteLine($"Please RSVP your attendance at {_email}");
 
+        Console.WriteLine("\nReception Short Description:\n");
         DisplayShortDescription();
     }
 

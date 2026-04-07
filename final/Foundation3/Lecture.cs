@@ -16,16 +16,19 @@ public class Lecture : Event
 
     public override void DisplayAllDetails()
     {
+        Console.WriteLine("\nLecture Standard Details:\n");
         DisplayStandardDetails();
 
+        Console.WriteLine("\nLecture Full Details:\n");
         Console.WriteLine($"We are pleased to have {_speaker} come and and give a {GetEventType()} about {_subject}.\n");
         Console.WriteLine("Event Details:");
         Console.WriteLine($"\n{GetTitle()}\n");
         Console.WriteLine($"{GetDescription()}\n");
-        Console.WriteLine($"{GetDate()}\n{GetTime}");
+        Console.WriteLine($"{GetDate()}\n{GetTime()}");
         Console.WriteLine($"{GetAddress()}\n");
-        Console.WriteLine($"Get your tickets soon as there will only be {_capacity} available");
+        Console.WriteLine($"Get your tickets soon as there will only be {_capacity} seats available\n\n");
 
+        Console.WriteLine("Lecture Short Description: ");
         DisplayShortDescription();
     }
 }
